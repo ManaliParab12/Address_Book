@@ -1,5 +1,6 @@
 package addressBook;
 
+import java.util.Comparator;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -35,7 +36,7 @@ public class AddressBook implements AddressBookInterface  {
 	
 	public void editPerson() {
 		
-		System.out.println("Enter First Name to update its record");
+		System.out.println("Enter First Name to update Record");
         String firstName = sc.next();
         
         for ( int i=0; i< personInfo.size(); i++) {
@@ -44,7 +45,7 @@ public class AddressBook implements AddressBookInterface  {
 			if(firstName.equals(person.firstName)) {
 				
 				System.out.println("Select any option to edit ");				
-				System.out.println("1.Phone NUmber" + "\n2.Address" + "\n3.Quit");
+				System.out.println("1.Phone Number" + "\n2.Address" + "\n3.Quit");
 				int choice = sc.nextInt();
 				
 				switch (choice) {
@@ -80,8 +81,16 @@ public class AddressBook implements AddressBookInterface  {
 
 
 	public void deletePerson() {
-		
-		
+		System.out.println("Enter Last Name to delete its Entry");
+		String lastName = sc.next();
+		for ( int i=0; i< personInfo.size(); i++) {
+			Person person = (Person)personInfo.get(i);
+			if(lastName.equals(person.lastName)) {
+				System.out.println(personInfo.get(i));
+				personInfo.remove(i);
+				System.out.println("Record Deleted");
+			}
+		}		
 	}
 
 	
@@ -98,10 +107,9 @@ public class AddressBook implements AddressBookInterface  {
 
 	public void searchPerson() {
 		
-		
-	}
+		}		
 
-
+	
 	public void display() {
 		System.out.println("Person Information");
 		for(int i=0; i<personInfo.size(); i++) {
