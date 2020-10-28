@@ -106,9 +106,15 @@ public class AddressBook implements AddressBookInterface  {
 
 
 	public void searchPerson() {
-		
-		}		
-
+		System.out.println("Enter Phone number to search the person");
+		long phoneNumber = sc.nextLong();
+		for ( int i=0; i< personInfo.size(); i++) {
+			Person person = (Person)personInfo.get(i);
+			if (phoneNumber == person.phoneNumber) {
+				System.out.println(personInfo.get(i));
+			}		
+		}
+	}
 	
 	public void display() {
 		System.out.println("Person Information");
