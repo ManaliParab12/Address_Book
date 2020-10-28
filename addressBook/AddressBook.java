@@ -35,7 +35,43 @@ public class AddressBook implements AddressBookInterface  {
 	
 	public void editPerson() {
 		
-		
+		System.out.println("Enter First Name to update its record");
+        String firstName = sc.next();
+        
+        for ( int i=0; i< personInfo.size(); i++) {
+        	Person person = (Person)personInfo.get(i);
+        	
+			if(firstName.equals(person.firstName)) {
+				
+				System.out.println("Select any option to edit ");				
+				System.out.println("1.Phone NUmber" + "\n2.Address" + "\n3.Quit");
+				int choice = sc.nextInt();
+				
+				switch (choice) {
+			    case 1 :
+			    	System.out.println("Enter new Phone Number");
+			    	long phoneNumber = sc.nextLong();
+			    	person.setPhoneNumber(phoneNumber);
+                    break;                            
+			    case 2 :
+			    	System.out.println("Enter new City");
+			    	String city = sc.next();
+			    	System.out.println("Enter new State");
+			    	String state = sc.next();
+			    	System.out.println("Enter new Zip");
+			    	int zip = sc.nextInt();
+			    	person.setCity(city);	
+			    	person.setState(state);	
+			    	person.setZip(zip);	
+			    	break;			  
+			    case 3 :
+			    	System.exit(0);
+			    	break;			      
+			    default :
+			    	System.out.println("Incorrect Choice");				
+				}			      
+			}
+        }			
 	}
 
 
