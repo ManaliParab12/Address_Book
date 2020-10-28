@@ -62,7 +62,7 @@ public class AddressBookMain {
 						addressbook.display();
 						break;
 					case 8 :
-						input =0;
+						input = 0;
 						break;
 					default :
 						System.out.println("Incorrect Choice" + "\nEnter a number between 1 and 8");			
