@@ -51,15 +51,19 @@ public class AddressBook implements AddressBookInterface  {
 			    case 1 :
 			    	System.out.println("Enter new Phone Number");
 			    	long phoneNumber = sc.nextLong();
+			    	
 			    	person.setPhoneNumber(phoneNumber);
                     break;                            
 			    case 2 :
 			    	System.out.println("Enter new City");
 			    	String city = sc.next();
+			    	
 			    	System.out.println("Enter new State");
 			    	String state = sc.next();
+			    	
 			    	System.out.println("Enter new Zip");
 			    	int zip = sc.nextInt();
+			    	
 			    	person.setCity(city);	
 			    	person.setState(state);	
 			    	person.setZip(zip);	
