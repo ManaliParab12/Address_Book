@@ -1,9 +1,9 @@
-package addressBook;
+ package addressBook;
 
 import java.util.Comparator;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
-
 public class AddressBook implements AddressBookInterface  {
 	
 	Scanner sc = new Scanner(System.in);
@@ -100,11 +100,9 @@ public class AddressBook implements AddressBookInterface  {
 	}
 
 	public void sortByZip() {
-		
-		
+
 	}
-
-
+	
 	public void searchPerson() {
 		System.out.println("Enter Phone number to search the person");
 		long phoneNumber = sc.nextLong();
