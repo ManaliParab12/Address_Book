@@ -95,8 +95,12 @@ public class AddressBook implements AddressBookInterface  {
 
 	
 	public void sortByName() {
-	
-		
+		Collections.sort(personInfo, new NameComparator());
+		System.out.println("Sorted Record By Name");
+		for ( int i=0; i< personInfo.size(); i++) {
+			Person person = (Person)personInfo.get(i);
+			System.out.println(person.toString());
+		}
 	}
 
 	public void sortByZip() {
