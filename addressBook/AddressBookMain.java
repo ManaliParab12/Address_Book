@@ -32,7 +32,7 @@ public class AddressBookMain {
 					System.out.println("1. Add Person"
 									+ "\n2. Edit Person"
 									+ "\n3. Delete Person"
-									+ "\n4. Sort Person by Last Name"
+									+ "\n4. Sort Person Records by First Name"
 									+ "\n5. Sort Person by Zip Code"
 									+ "\n6. Search Person"
 									+ "\n7. Display"
